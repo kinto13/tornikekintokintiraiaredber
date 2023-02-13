@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="tttpage.css">
+    <title>form</title>
+</head>
+<body>
+    <button onclick="window.location.href = 'file:///C:/Users/tornike/Desktop/New%20folder%20(3)/firpage.html';"> < </button>
+    <p>განათლება</p>
+    <hr >
+
+     <h3>3/3</h3>
+
+<form>
+     <div class="input-group">
+        <label for="saswavlebeli" id="pirveli">სასწავლებელი</label>
+        <input type="text" name="sasw" class="saswavl" id="saswavlebeli" onkeyup="myfunction()" placeholder="სასწავლებელი"/>
+        <span id="tele-error"> </span>
+        </div>
+            <label class="toto">ხარისხი</label>
+                <select id="xarisxi" name="xarisx">
+                <option value="" selected="selected">აირჩიე ხარისხი</option>
+                <option value="school" >საშუალო სკოლის დიპლომი</option>
+                <option value="hischool" >ზოგადსაგანმანათლებლო დიპლომი</option>
+                <option value="bachalory" >ბაკალავრი</option>
+                <option value="magistr" >მაგისტრი</option>
+                <option value="dr" >დოქტორი</option>
+                <option value="associate degree" >ასოცირებული ხარისხი</option>
+                <option value="student" >სტუდენტი</option>
+                <option value="College " >კოლეჯი (ხარისხის გარეშე)</option>
+                <option value="other" >სხვა</option>
+                </select> 
+                    <div class="input-group">
+                          <label for="data2" id="dastarigi">დასრულების თარიღი</label>
+                             <input type="date" name="tarig" class="tari2" id="data2" onkeyup="myfunction()" placeholder="mm/dd/yyyy"/>
+                                <span id="tele-error"> </span>
+                     </div>
+                    
+                                   <div class="input-group" >
+                                       <label  class="chem" >აღწერა</label>
+                                         <textarea class="wtex" name="text" rows="4" cols="50"  id="tx" onkeyup="myfunction()" placeholder="ჩემ შესახებ">   
+                                                    </textarea>
+                                           </div>                 
+</form>
+
+
+<button id="buto">მეტი გამოცდილების დამატება</button>
+
+
+<button id="buto2" formaction="file:///C:/Users/tornike/Desktop/New%20folder%20(3)/firpage.html">უკან</button>
+
+<button id="buto3" formaction="">დასრულება</button>
+
+
+<script>
+    const buto2 = document.getElementById('buto2');
+    const buto3 = document.getElementById('buto3');  
+
+buto2.addEventListener('click', () => {
+  window.location.href = "topage.html";
+});
+
+buto3.addEventListener('click', () => {
+  window.location.href = "";
+});
+</script>
+
+</body>
+</html>

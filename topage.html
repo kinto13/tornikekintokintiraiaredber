@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="topage.css">
+    <title>form</title>
+
+</head>
+<body>
+    <button onclick="window.location.href = 'file:///C:/Users/tornike/Desktop/New%20folder%20(3)/firpage.html';"> < </button>
+       <p>გამოცდილება</p>
+       <hr >
+
+        <h3>2/3</h3>
+      
+
+<form>
+    <div class="input-group">
+        <label for="tanamdeboba" id="pirveliTanam">თანამდებობა</label>
+        <input type="text" name="tanam" class="tanamdeboba" id="tanamdeboba" onkeyup="myfunction()" placeholder="თანამდებობა"/>
+
+        <span id="tele-error"> </span>
+        </div>
+        <div class="input-group">
+            <label for="dasaqmeba" id="dasaqm">დამსაქმებელი</label>
+            <input type="text" name="dasaqmeba" class="saqme" id="dasaqmeba" onkeyup="myfunction()" placeholder="დასაქმებული"/>
+            <span id="tele-error"> </span>
+            </div>
+            <div class="input-group">
+                <label for="data" id="tarigi">დაწყების თარიღი</label>
+                <input type="date" name="tarig" class="tari" id="data" onkeyup="myfunction()" placeholder="mm/dd/yyyy"/>
+                <span id="tele-error"> </span>
+                </div>
+                <div class="input-group">
+                    <label for="data2" id="dastarigi">დასრულების თარიღი</label>
+                    <input type="date" name="tarig" class="tari2" id="data2" onkeyup="myfunction()" placeholder="mm/dd/yyyy"/>
+                    <span id="tele-error"> </span>
+                    </div>
+                    <div class="input-group" >
+                        <label  class="chem" >აღწერა</label>
+                        <textarea class="wtex" name="text" rows="4" cols="50"  id="tx" onkeyup="myfunction()" placeholder="ჩემ შესახებ">   
+                        </textarea>
+                      </div>
+</form>
+
+
+<div><span id="one1"></span></div>
+<div><span id="one2"></span></div>
+<div><span id="one3"></span></div>
+<div><span id="one4"></span></div>
+<div><span id="one5"></span></div>
+<main>
+    <div id="data"></div>
+</main>
+
+<button id="buto">მეტი გამოცდილების დამატება</button>
+
+<button id="buto2">უკან</button>
+<button id="buto3" formaction="">შემდეგ</button>
+
+
+
+<script>
+    const buto2 = document.getElementById('buto2');
+    const buto3 = document.getElementById('buto3');  
+
+buto2.addEventListener('click', () => {
+  window.location.href = "firpage.html";
+});
+
+buto3.addEventListener('click', () => {
+  window.location.href = "tttpage.html";
+});
+</script>
+
+
+
+<script>
+const url = localStorage.getItem('my-image');
+
+const img = new Image();
+img.src = url;
+document.body.appendChild(img);
+
+
+
+</script>
+<script>
+    const json = localStorage.getItem('form');
+    const obj = JSON.parse(json);
+
+    for (key in obj){
+        const markup = `
+        <div>
+            <span>${key}: ${obj[key]}</span>
+            </div>
+        `;
+        document.getElementById('data').innerHTML += markup;
+    }
+
+</script>
+
+
+
+<script> 
+
+    function myfunction(){
+    
+    var x=document.getElementById("tanamdeboba").value;
+    document.getElementById("one1").innerHTML = x;
+
+    var x=document.getElementById("dasaqmeba").value;
+    document.getElementById("one2").innerHTML = x;
+
+    var x=document.getElementById("data").value;
+    document.getElementById("one3").innerHTML = x;
+
+    
+    var x=document.getElementById("data2").value;
+    document.getElementById("one4").innerHTML = x;
+
+
+    var x=document.getElementById("tx").value;
+    document.getElementById("one5").innerHTML = x;
+    }
+
+</script>
+
+
+</body>
+
+</html>
+
